@@ -15,7 +15,6 @@ class TodoListViewController: UIViewController {
     @IBOutlet private weak var addButton: UIBarButtonItem!
     
     // MARK:- Properties
-    private let cellIdentifier = "TaskCell"
     private let titleString = "To-do List"
     
     // MARK:- View Life Cycle Methods
@@ -36,7 +35,7 @@ extension TodoListViewController {
         tableView.delegate = self
         
         // Register task cell to be dequeued by tableView
-        tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.register(UINib(nibName: TaskCell.identifier, bundle: nil), forCellReuseIdentifier: TaskCell.identifier)
     }
 }
 
@@ -47,7 +46,7 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TaskCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.identifier, for: indexPath) as! TaskCell
         return cell
     }
 }
