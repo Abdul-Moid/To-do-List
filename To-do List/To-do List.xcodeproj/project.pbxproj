@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D79F8872032A8D6008864D3 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79F8862032A8D6008864D3 /* AddTaskViewController.swift */; };
 		8D87379620312EB3009CE95E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87379520312EB3009CE95E /* PersistenceManager.swift */; };
 		8D87379920312FA9009CE95E /* To-do List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D87379720312FA9009CE95E /* To-do List.xcdatamodeld */; };
 		8D8D12352030021F0011CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D12342030021F0011CB65 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D79F8862032A8D6008864D3 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		8D87379520312EB3009CE95E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		8D87379820312FA9009CE95E /* To-do List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "To-do List.xcdatamodel"; sourceTree = "<group>"; };
 		8D8D12312030021F0011CB65 /* To-do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				8DDA1FB62030119F009EE46A /* TodoListViewController.swift */,
+				8D79F8862032A8D6008864D3 /* AddTaskViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DDA1FB72030119F009EE46A /* TodoListViewController.swift in Sources */,
+				8D79F8872032A8D6008864D3 /* AddTaskViewController.swift in Sources */,
 				8DDA1FB320300D68009EE46A /* TaskCell.swift in Sources */,
 				8D8D12352030021F0011CB65 /* AppDelegate.swift in Sources */,
 				8D87379620312EB3009CE95E /* PersistenceManager.swift in Sources */,
