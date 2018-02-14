@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1591" y="81"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Task View Controller-->
         <scene sceneID="bga-om-jgO">
             <objects>
-                <viewController id="6Zy-Uq-aEh" sceneMemberID="viewController">
+                <viewController id="6Zy-Uq-aEh" customClass="AddTaskViewController" customModule="To_do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="WKn-GP-jg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,9 @@
                                                 <state key="normal" title="DONE">
                                                     <color key="titleColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="doneButtonTap:" destination="6Zy-Uq-aEh" eventType="touchUpInside" id="wq0-9O-KzM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90868842599999999" green="0.41336940480000001" blue="0.42702836529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,6 +123,10 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="doneButton" destination="95h-ob-j5A" id="ESe-w4-P59"/>
+                        <outlet property="taskTextField" destination="pKi-1b-Oxz" id="R9d-kg-IAW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cT-YY-l9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
