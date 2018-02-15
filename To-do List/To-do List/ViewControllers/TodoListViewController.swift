@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import CoreData
+
+protocol TaskUpdateDelegate {
+    func didFinishAddingTask()
+}
 
 class TodoListViewController: UIViewController {
     
@@ -16,6 +21,7 @@ class TodoListViewController: UIViewController {
     
     // MARK:- Properties
     private let titleString = "To-do List"
+    private var tasks = [Task]()
     
     // MARK:- View Life Cycle Methods
     override func viewDidLoad() {
@@ -42,11 +48,12 @@ extension TodoListViewController {
 // MARK:- Table View Data Source
 extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.identifier, for: indexPath) as! TaskCell
+        cell.titleLabel.text = tasks[indexPath.row].title
         return cell
     }
 }
