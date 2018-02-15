@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="5c4-XZ-sR4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qfC-SI-FcQ">
                             <connections>
-                                <segue destination="6Zy-Uq-aEh" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="flipHorizontal" id="xux-Uu-nOy"/>
+                                <segue destination="6Zy-Uq-aEh" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="xux-Uu-nOy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -52,18 +52,42 @@
         <scene sceneID="bga-om-jgO">
             <objects>
                 <viewController id="6Zy-Uq-aEh" customClass="AddTaskViewController" customModule="To_do_List" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" contentMode="scaleToFill" id="WKn-GP-jg8">
+                    <view key="view" contentMode="scaleToFill" id="WKn-GP-jg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDb-sd-3ek">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kip-om-2JE">
-                                <rect key="frame" x="-4" y="80" width="383" height="179.5"/>
+                                <rect key="frame" x="20" y="60" width="335" height="219.5"/>
                                 <subviews>
                                     <stackView contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VRO-MQ-T7S">
-                                        <rect key="frame" x="20" y="20" width="343" height="139.5"/>
+                                        <rect key="frame" x="20" y="20" width="295" height="179.5"/>
                                         <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiY-7m-f7S">
+                                                <rect key="frame" x="0.0" y="0.0" width="295" height="25"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxu-Tw-bri">
+                                                        <rect key="frame" x="0.0" y="0.0" width="245" height="25"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB2-yE-Htr">
+                                                        <rect key="frame" x="245" y="0.0" width="50" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="4vf-gi-AEK"/>
+                                                            <constraint firstAttribute="height" constant="25" id="Ip7-Nr-zKG"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Close"/>
+                                                        <connections>
+                                                            <action selector="closeButtonTap:" destination="6Zy-Uq-aEh" eventType="touchUpInside" id="Ugm-jm-otX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J73-0l-26x">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="40" width="295" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="vdG-F3-E2V"/>
                                                 </constraints>
@@ -72,7 +96,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pKi-1b-Oxz">
-                                                <rect key="frame" x="0.0" y="35.5" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="75.5" width="295" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="VE1-Rd-jyN"/>
                                                 </constraints>
@@ -81,14 +105,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qG0-le-40x">
-                                                <rect key="frame" x="0.0" y="80.5" width="343" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="120.5" width="295" height="0.0"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="shQ-I9-boo"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95h-ob-j5A">
-                                                <rect key="frame" x="0.0" y="95.5" width="343" height="44"/>
+                                                <rect key="frame" x="0.0" y="135.5" width="295" height="44"/>
                                                 <color key="backgroundColor" red="0.28408726979136706" green="0.70709127551798612" blue="0.90868842601776123" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="KAJ-pO-Q0l"/>
@@ -115,16 +139,19 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Kip-om-2JE" firstAttribute="trailing" secondItem="tsw-oo-FVn" secondAttribute="trailing" constant="4" id="Q98-Hx-EyW"/>
-                            <constraint firstItem="tsw-oo-FVn" firstAttribute="leading" secondItem="Kip-om-2JE" secondAttribute="leading" constant="4" id="SDo-1i-78N"/>
-                            <constraint firstItem="Kip-om-2JE" firstAttribute="top" secondItem="tsw-oo-FVn" secondAttribute="top" constant="60" id="htk-un-V8K"/>
+                            <constraint firstItem="EDb-sd-3ek" firstAttribute="top" secondItem="tsw-oo-FVn" secondAttribute="top" id="CmV-1i-UDt"/>
+                            <constraint firstAttribute="trailing" secondItem="EDb-sd-3ek" secondAttribute="trailing" id="Dsm-0y-M9W"/>
+                            <constraint firstItem="tsw-oo-FVn" firstAttribute="trailing" secondItem="Kip-om-2JE" secondAttribute="trailing" constant="20" id="R0y-fH-TQF"/>
+                            <constraint firstItem="Kip-om-2JE" firstAttribute="top" secondItem="tsw-oo-FVn" secondAttribute="top" constant="40" id="Sfh-zG-vDO"/>
+                            <constraint firstItem="Kip-om-2JE" firstAttribute="leading" secondItem="tsw-oo-FVn" secondAttribute="leading" constant="20" id="asM-7X-Fej"/>
+                            <constraint firstItem="tsw-oo-FVn" firstAttribute="bottom" secondItem="EDb-sd-3ek" secondAttribute="bottom" id="gqf-IF-hbe"/>
+                            <constraint firstItem="EDb-sd-3ek" firstAttribute="leading" secondItem="WKn-GP-jg8" secondAttribute="leading" id="guh-YC-clv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tsw-oo-FVn"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="doneButton" destination="95h-ob-j5A" id="ESe-w4-P59"/>
                         <outlet property="taskTextField" destination="pKi-1b-Oxz" id="R9d-kg-IAW"/>
                     </connections>
                 </viewController>

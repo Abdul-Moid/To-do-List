@@ -12,15 +12,21 @@ class AddTaskViewController: UIViewController {
 
     // MARK: IBOutlets
     @IBOutlet private weak var taskTextField: UITextField!
-    @IBOutlet private weak var doneButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+}
 
+// MARK:- IBActions
+extension AddTaskViewController {
+    
     @IBAction private func doneButtonTap(_ sender: Any) {
         // TODO: Write the logic for entering data in database
     }
     
+    @IBAction func closeButtonTap(_ sender: Any) {
+        // Dismiss the control when the user taps on close
+        self.dismiss(animated: true, completion: nil)
+    }
 }
