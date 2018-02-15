@@ -9,10 +9,6 @@
 import UIKit
 import CoreData
 
-protocol TaskUpdateDelegate {
-    func didFinishAddingTask()
-}
-
 class TodoListViewController: UIViewController {
     
     // MARK:- Outlets
@@ -26,7 +22,40 @@ class TodoListViewController: UIViewController {
     // MARK:- View Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initialSetup()
+        initialSetup()
+        fetchSavedItems()
+    }
+}
+
+// MARK:- Database insertion and retreival
+extension TodoListViewController {
+    @IBAction func unwindToListViewController(segue: UIStoryboardSegue) {
+        // TODO: Need to handle the case when text is nil
+        guard let addTaskVC = segue.source as? AddTaskViewController,
+        let input = addTaskVC.input, !input.isEmpty else { return }
+        
+        // Perform the save operation
+        let task = Task(context: PersistenceManager.context)
+        task.title = input
+        task.creationTime = Date() as NSDate
+        PersistenceManager.saveContext()
+        
+        // Call to fetch saved task items
+        fetchSavedItems()
+        
+        // Reload the tableView to reflect changes
+        tableView.reloadData()
+    }
+    
+    func fetchSavedItems() {
+        // Create a fetch request to fetch latest tasks saved
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+    
+        // Need to handle the failed requests
+        guard let tasks = try? PersistenceManager.context.fetch(fetchRequest) else { return }
+        
+        // Update the local tasks variable
+        self.tasks = tasks
     }
 }
 
