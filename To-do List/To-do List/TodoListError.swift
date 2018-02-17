@@ -1,5 +1,5 @@
 //
-//  Errors.swift
+//  TodoListErrors.swift
 //  To-do List
 //
 //  Created by Abdulmoid Mohammed on 2/16/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum TodoListErrors: Error, CustomStringConvertible {
+enum TodoListError: Error, CustomStringConvertible {
     /// Input is empty
     case emptyInput
     /// Database fetch error
@@ -19,8 +19,16 @@ enum TodoListErrors: Error, CustomStringConvertible {
         case .emptyInput:
             return "Please provide a valid input"
         case .fetchError:
-            return "No saved tasks. Please add one."
+            return "No saved tasks."
         }
     }
-
+    
+    var alertDescription: AlertDescription {
+        switch self {
+        case .emptyInput:
+            return AlertDescription(title: "Input Error", message: self.description)
+        case .fetchError:
+            return AlertDescription(title: "Fetch Error", message: self.description)
+        }
+    }
 }
