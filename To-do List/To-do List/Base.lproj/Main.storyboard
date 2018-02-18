@@ -56,10 +56,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDb-sd-3ek">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                            <visualEffectView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPR-XB-uCF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8qO-m2-XS7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kip-om-2JE">
                                 <rect key="frame" x="20" y="60" width="335" height="219.5"/>
                                 <subviews>
@@ -139,13 +143,13 @@
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="EDb-sd-3ek" firstAttribute="top" secondItem="tsw-oo-FVn" secondAttribute="top" id="CmV-1i-UDt"/>
-                            <constraint firstAttribute="trailing" secondItem="EDb-sd-3ek" secondAttribute="trailing" id="Dsm-0y-M9W"/>
+                            <constraint firstAttribute="bottom" secondItem="oPR-XB-uCF" secondAttribute="bottom" id="HDl-ea-y80"/>
+                            <constraint firstItem="oPR-XB-uCF" firstAttribute="leading" secondItem="tsw-oo-FVn" secondAttribute="leading" id="HEK-OC-Tj6"/>
                             <constraint firstItem="tsw-oo-FVn" firstAttribute="trailing" secondItem="Kip-om-2JE" secondAttribute="trailing" constant="20" id="R0y-fH-TQF"/>
                             <constraint firstItem="Kip-om-2JE" firstAttribute="top" secondItem="tsw-oo-FVn" secondAttribute="top" constant="40" id="Sfh-zG-vDO"/>
+                            <constraint firstItem="oPR-XB-uCF" firstAttribute="top" secondItem="tsw-oo-FVn" secondAttribute="top" id="ara-hc-ZhB"/>
                             <constraint firstItem="Kip-om-2JE" firstAttribute="leading" secondItem="tsw-oo-FVn" secondAttribute="leading" constant="20" id="asM-7X-Fej"/>
-                            <constraint firstItem="tsw-oo-FVn" firstAttribute="bottom" secondItem="EDb-sd-3ek" secondAttribute="bottom" id="gqf-IF-hbe"/>
-                            <constraint firstItem="EDb-sd-3ek" firstAttribute="leading" secondItem="WKn-GP-jg8" secondAttribute="leading" id="guh-YC-clv"/>
+                            <constraint firstItem="oPR-XB-uCF" firstAttribute="trailing" secondItem="tsw-oo-FVn" secondAttribute="trailing" id="srZ-II-cnP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tsw-oo-FVn"/>
                     </view>

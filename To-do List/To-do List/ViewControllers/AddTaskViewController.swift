@@ -20,6 +20,7 @@ class AddTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.taskTextField.becomeFirstResponder()
     }
 }
 

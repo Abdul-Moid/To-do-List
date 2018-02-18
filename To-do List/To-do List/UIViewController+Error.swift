@@ -9,7 +9,11 @@
 import UIKit
 import Foundation
 
-extension UIViewController {
+protocol ErrorDisplayable {
+    func display(error: TodoListError)
+}
+
+extension UIViewController: ErrorDisplayable {
     func display(error: TodoListError) {
         let alert = UIAlertController(alertDescription: error.alertDescription)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
