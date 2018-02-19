@@ -13,6 +13,8 @@ enum TodoListError: Error, CustomStringConvertible {
     case emptyInput
     /// Database fetch error
     case fetchError
+    /// Data serialization error
+    case serializationError
     
     var description: String {
         switch self {
@@ -20,6 +22,8 @@ enum TodoListError: Error, CustomStringConvertible {
             return "Please provide a valid input"
         case .fetchError:
             return "No saved tasks."
+        case .serializationError:
+            return "Failed to serialize data"
         }
     }
     
@@ -29,6 +33,8 @@ enum TodoListError: Error, CustomStringConvertible {
             return AlertDescription(title: "Input Error", message: self.description)
         case .fetchError:
             return AlertDescription(title: "Fetch Error", message: self.description)
+        case .serializationError:
+            return AlertDescription(title: "Serialization Error", message: self.description)
         }
     }
 }

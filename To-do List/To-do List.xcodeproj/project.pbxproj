@@ -24,6 +24,7 @@
 		8DDFECB32037F0B60048F6F7 /* TodoListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDFECB22037F0B60048F6F7 /* TodoListError.swift */; };
 		8DDFECB52037F3EF0048F6F7 /* UIViewController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDFECB42037F3EF0048F6F7 /* UIViewController+Error.swift */; };
 		8DDFECB82037F6490048F6F7 /* UIAlertController+AlertDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDFECB72037F6490048F6F7 /* UIAlertController+AlertDescription.swift */; };
+		8DDFECBA203A99DD0048F6F7 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDFECB9203A99DD0048F6F7 /* Priority.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		8DDFECB22037F0B60048F6F7 /* TodoListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListError.swift; sourceTree = "<group>"; };
 		8DDFECB42037F3EF0048F6F7 /* UIViewController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Error.swift"; sourceTree = "<group>"; };
 		8DDFECB72037F6490048F6F7 /* UIAlertController+AlertDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertDescription.swift"; sourceTree = "<group>"; };
+		8DDFECB9203A99DD0048F6F7 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				8DB21D8A2032B0B8007A7A71 /* Task+CoreDataClass.swift */,
 				8DB21D8B2032B0B8007A7A71 /* Task+CoreDataProperties.swift */,
+				8DDFECB9203A99DD0048F6F7 /* Priority.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				8DB21D8D2032B0B8007A7A71 /* Task+CoreDataProperties.swift in Sources */,
 				8DDFECB32037F0B60048F6F7 /* TodoListError.swift in Sources */,
 				8D87379920312FA9009CE95E /* To-do List.xcdatamodeld in Sources */,
+				8DDFECBA203A99DD0048F6F7 /* Priority.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
