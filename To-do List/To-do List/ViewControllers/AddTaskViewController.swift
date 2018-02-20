@@ -8,10 +8,17 @@
 
 import UIKit
 
+protocol AddTaskDelegate {
+    func didAddNewTask()
+}
+
 class AddTaskViewController: UIViewController {
 
     // MARK: IBOutlets
     @IBOutlet private weak var taskTextField: UITextField!
+    
+    // Delegate to notify new task
+    var delegate: AddTaskDelegate!
     
     // Get latest text field value
     lazy var input: String? = {
@@ -22,13 +29,44 @@ class AddTaskViewController: UIViewController {
         super.viewDidLoad()
         self.taskTextField.becomeFirstResponder()
     }
+
 }
 
 // MARK:- IBActions
 extension AddTaskViewController {
     
+    @IBAction func doneButtonTap(_ sender: Any) {
+        // Check if the input is valid
+        guard let input = taskTextField.text, !input.isEmpty else {
+            // Show error if the input is not valid
+            display(error: .emptyInput)
+            // Return
+            return
+        }
+        
+        // Then perform the database operation
+        persistTask(input: input)
+        
+        // Notify that task has been added
+        delegate.didAddNewTask()
+        
+        // Dismiss
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func closeButtonTap(_ sender: Any) {
         // Dismiss the controller when the user taps on close
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AddTaskViewController {
+    // Save task in database
+    func persistTask(input: String) {
+        // Perform the save operation
+        let task = Task(context: PersistenceManager.context)
+        task.title = input
+        task.creationTime = Date() as NSDate
+        PersistenceManager.saveContext()
     }
 }

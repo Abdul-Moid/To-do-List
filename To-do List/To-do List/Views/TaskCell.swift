@@ -10,8 +10,8 @@ import UIKit
 
 class TaskCell: UITableViewCell {
     
-    // MARK:- Cell Identifier
-    static let identifier = "TaskCell"
+//    // MARK:- Cell Identifier
+//    static let identifier = String(describing: TaskCell.self)
 
     // MARK:- Outlets
     @IBOutlet weak var titleLabel: UILabel!

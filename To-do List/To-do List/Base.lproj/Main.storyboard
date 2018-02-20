@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="5c4-XZ-sR4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qfC-SI-FcQ">
                             <connections>
-                                <segue destination="6Zy-Uq-aEh" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="xux-Uu-nOy"/>
+                                <action selector="addButtonTap:" destination="BYZ-38-t0r" id="b5t-aL-vG7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -51,7 +51,7 @@
         <!--Add Task View Controller-->
         <scene sceneID="bga-om-jgO">
             <objects>
-                <viewController id="6Zy-Uq-aEh" customClass="AddTaskViewController" customModule="To_do_List" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTaskViewController" id="6Zy-Uq-aEh" customClass="AddTaskViewController" customModule="To_do_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WKn-GP-jg8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +126,7 @@
                                                     <color key="titleColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="jVr-FM-krx" kind="unwind" identifier="TodoListUnwind" unwindAction="unwindToListViewControllerWithSegue:" id="fLP-Oc-VqH"/>
+                                                    <action selector="doneButtonTap:" destination="6Zy-Uq-aEh" eventType="touchUpInside" id="eAH-TO-2IZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -160,7 +160,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cT-YY-l9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="jVr-FM-krx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2362" y="81"/>
         </scene>

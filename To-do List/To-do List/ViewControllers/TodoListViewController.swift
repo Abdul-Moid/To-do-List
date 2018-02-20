@@ -29,33 +29,30 @@ class TodoListViewController: UIViewController {
 
 // MARK:- Database insertion and retreival
 extension TodoListViewController {
-    @IBAction func unwindToListViewController(segue: UIStoryboardSegue) {
-        // TODO: Need to handle the case when text is nil
-        guard let addTaskVC = segue.source as? AddTaskViewController,
-        let input = addTaskVC.input, !input.isEmpty else { return }
+    @IBAction func addButtonTap(_ sender: Any) {
+        // Instantiate the view controller from storyboard
+        let addTaskVC = storyboard?.instantiateViewController(withIdentifier: AddTaskViewController.id) as! AddTaskViewController
         
-        // Perform the save operation
-        let task = Task(context: PersistenceManager.context)
-        task.title = input
-        task.creationTime = Date() as NSDate
-        PersistenceManager.saveContext()
+        // Set the delegate
+        addTaskVC.delegate = self
         
+        // Set the presentation context
+        addTaskVC.modalPresentationStyle = .overCurrentContext
+        
+        // Present view controller
+        present(addTaskVC, animated: true, completion: nil)
+    }
+}
+
+// MARK:- Add Task Delegate
+extension TodoListViewController: AddTaskDelegate {
+    // Called when a new task is added
+    func didAddNewTask() {
         // Call to fetch saved task items
         fetchSavedItems()
         
         // Reload the tableView to reflect changes
         tableView.reloadData()
-    }
-    
-    func fetchSavedItems() {
-        // Create a fetch request to fetch latest tasks saved
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-    
-        // Need to handle the failed requests
-        guard let tasks = try? PersistenceManager.context.fetch(fetchRequest) else { return }
-        
-        // Update the local tasks variable
-        self.tasks = tasks
     }
 }
 
@@ -70,7 +67,19 @@ extension TodoListViewController {
         tableView.delegate = self
         
         // Register task cell to be dequeued by tableView
-        tableView.register(UINib(nibName: TaskCell.identifier, bundle: nil), forCellReuseIdentifier: TaskCell.identifier)
+        tableView.register(UINib(nibName: TaskCell.id, bundle: nil), forCellReuseIdentifier: TaskCell.id)
+    }
+    
+    // Database retreival
+    func fetchSavedItems() {
+        // Create a fetch request to fetch latest tasks saved
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        
+        // Need to handle the failed requests
+        guard let tasks = try? PersistenceManager.context.fetch(fetchRequest) else { return }
+        
+        // Update the local tasks variable
+        self.tasks = tasks
     }
 }
 
@@ -81,7 +90,7 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.identifier, for: indexPath) as! TaskCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.id, for: indexPath) as! TaskCell
         cell.titleLabel.text = tasks[indexPath.row].title
         return cell
     }
