@@ -94,4 +94,22 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
         cell.titleLabel.text = tasks[indexPath.row].title
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // Return if editing style is not delete
+        if editingStyle != .delete { return }
+        
+        // Delete the task at that index
+        PersistenceManager.context.delete(tasks[indexPath.row])
+        
+        // Fetch tableView tasks
+        fetchSavedItems()
+        
+        // Reload tableView once deleted
+        tableView.reloadData()
+    }
 }
