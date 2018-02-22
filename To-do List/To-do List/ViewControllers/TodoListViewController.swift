@@ -92,6 +92,7 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.id, for: indexPath) as! TaskCell
         cell.titleLabel.text = tasks[indexPath.row].title
+        cell.creationDateLabel.text = "Created:\(tasks[indexPath.row].creationTime!.string(with: "dd/MM/yy"))"
         return cell
     }
     
@@ -105,6 +106,7 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
         
         // Delete the task at that index
         PersistenceManager.context.delete(tasks[indexPath.row])
+        PersistenceManager.saveContext()
         
         // Fetch tableView tasks
         fetchSavedItems()
