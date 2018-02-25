@@ -31,7 +31,7 @@ class TodoListViewController: UIViewController {
 extension TodoListViewController {
     @IBAction func addButtonTap(_ sender: Any) {
         // Instantiate the view controller from storyboard
-        let addTaskVC = storyboard?.instantiateViewController(withIdentifier: AddTaskViewController.id) as! AddTaskViewController
+        let addTaskVC = AddTaskViewController.instantiate(from: .AddTask)
         
         // Set the delegate
         addTaskVC.delegate = self
