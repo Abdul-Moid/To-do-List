@@ -114,4 +114,15 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
         // Reload tableView once deleted
         tableView.reloadData()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Deselect the selected row
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Create an instance of TaskDetailsViewController
+        let detailsVC = TaskDetailsViewController.instantiate(from: .TaskDetail)
+        
+        // Push to TaskDetailsViewController
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
 }

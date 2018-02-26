@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D4AE9382043B30800D6A2AD /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AE9372043B30800D6A2AD /* TaskDetailsViewController.swift */; };
 		8D64FDC6203E908400227D66 /* NSDate+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64FDC5203E908400227D66 /* NSDate+String.swift */; };
 		8D64FDD9204269E100227D66 /* UIViewController+StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64FDD8204269E100227D66 /* UIViewController+StoryboardInstantiable.swift */; };
 		8D64FDDC2042712700227D66 /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D64FDDB2042712700227D66 /* AddTask.storyboard */; };
+		8D64FDDE204343BB00227D66 /* TaskDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D64FDDD204343BB00227D66 /* TaskDetail.storyboard */; };
 		8D87379620312EB3009CE95E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87379520312EB3009CE95E /* PersistenceManager.swift */; };
 		8D87379920312FA9009CE95E /* To-do List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D87379720312FA9009CE95E /* To-do List.xcdatamodeld */; };
 		8D8D12352030021F0011CB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8D12342030021F0011CB65 /* AppDelegate.swift */; };
@@ -49,9 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D4AE9372043B30800D6A2AD /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		8D64FDC5203E908400227D66 /* NSDate+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+String.swift"; sourceTree = "<group>"; };
 		8D64FDD8204269E100227D66 /* UIViewController+StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInstantiable.swift"; sourceTree = "<group>"; };
 		8D64FDDB2042712700227D66 /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
+		8D64FDDD204343BB00227D66 /* TaskDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskDetail.storyboard; sourceTree = "<group>"; };
 		8D87379520312EB3009CE95E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		8D87379820312FA9009CE95E /* To-do List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "To-do List.xcdatamodel"; sourceTree = "<group>"; };
 		8D8D12312030021F0011CB65 /* To-do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,7 @@
 			children = (
 				8DB21D9420355558007A7A71 /* AddTaskViewController.swift */,
 				8DDA1FB62030119F009EE46A /* TodoListViewController.swift */,
+				8D4AE9372043B30800D6A2AD /* TaskDetailsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			children = (
 				8D8D12382030021F0011CB65 /* Main.storyboard */,
 				8D64FDDB2042712700227D66 /* AddTask.storyboard */,
+				8D64FDDD204343BB00227D66 /* TaskDetail.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				8D8D123F2030021F0011CB65 /* LaunchScreen.storyboard in Resources */,
 				8D8D123C2030021F0011CB65 /* Assets.xcassets in Resources */,
 				8D64FDDC2042712700227D66 /* AddTask.storyboard in Resources */,
+				8D64FDDE204343BB00227D66 /* TaskDetail.storyboard in Resources */,
 				8D8D123A2030021F0011CB65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +363,7 @@
 			files = (
 				8DDFECB82037F6490048F6F7 /* UIAlertController+AlertDescription.swift in Sources */,
 				8DDA1FB72030119F009EE46A /* TodoListViewController.swift in Sources */,
+				8D4AE9382043B30800D6A2AD /* TaskDetailsViewController.swift in Sources */,
 				8DDFECB52037F3EF0048F6F7 /* UIViewController+Error.swift in Sources */,
 				8DB21D9520355558007A7A71 /* AddTaskViewController.swift in Sources */,
 				8DB21D8C2032B0B8007A7A71 /* Task+CoreDataClass.swift in Sources */,

@@ -18,7 +18,7 @@ extension UIViewController {
 
 /// Storyboards in the App
 enum Storyboard: String {
-    case Main, AddTask
+    case Main, AddTask, TaskDetail
     
     /// Instance of UIStoryboard
     var instance: UIStoryboard {
