@@ -9,7 +9,7 @@
 import UIKit
 
 // TODO: Make a generic class for Button
-class PriorityViewButton: UIButton {
+class PriorityViewButton: UIButton, ViewCustomizable {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,7 +21,7 @@ class PriorityViewButton: UIButton {
         setup()
     }
     
-    private func setup() {
+    func setup() {
         layer.borderColor = UIColor.black.cgColor
         layer.borderWidth = 1
         titleLabel?.font = UIFont.systemFont(ofSize: 12.0, weight: .semibold)

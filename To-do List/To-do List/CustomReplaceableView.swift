@@ -13,6 +13,7 @@ class CustomReplaceableView: UIView {
     override func awakeAfter(using aDecoder: NSCoder) -> Any? {
         super.awakeAfter(using: aDecoder)
         
+        /// Check if the views are empty
         guard subviews.isEmpty else { return self }
         
         let view = type(of: self).nibView() as CustomReplaceableView

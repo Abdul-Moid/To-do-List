@@ -8,6 +8,18 @@
 
 import UIKit
 
-class PriorityView: CustomReplaceableView {
-
+class PriorityView: CustomReplaceableView, ViewCustomizable {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
+        layer.cornerRadius = 5
+    }
 }
