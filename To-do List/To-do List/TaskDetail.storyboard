@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tpb-Ts-UQW">
-                                <rect key="frame" x="16" y="36" width="343" height="420"/>
+                                <rect key="frame" x="16" y="36" width="343" height="581"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSc-5d-8EA">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -80,11 +80,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVO-JQ-mIb" customClass="PriorityView" customModule="To_do_List" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="380" width="343" height="40"/>
+                                        <rect key="frame" x="0.0" y="380" width="343" height="201"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="mdk-hY-JyW"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -93,6 +90,7 @@
                         <constraints>
                             <constraint firstItem="TGF-m4-Yz8" firstAttribute="trailing" secondItem="tpb-Ts-UQW" secondAttribute="trailing" constant="16" id="fMT-Ew-jjJ"/>
                             <constraint firstItem="tpb-Ts-UQW" firstAttribute="leading" secondItem="TGF-m4-Yz8" secondAttribute="leading" constant="16" id="h8O-ek-yzX"/>
+                            <constraint firstItem="TGF-m4-Yz8" firstAttribute="bottom" secondItem="tpb-Ts-UQW" secondAttribute="bottom" constant="50" id="wcu-ZM-8JY"/>
                             <constraint firstItem="tpb-Ts-UQW" firstAttribute="top" secondItem="TGF-m4-Yz8" secondAttribute="top" constant="16" id="yfF-O1-BCt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TGF-m4-Yz8"/>
@@ -100,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPL-Yy-aHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="48"/>
+            <point key="canvasLocation" x="36" y="47.226386806596707"/>
         </scene>
     </scenes>
 </document>

@@ -22,8 +22,6 @@ class PriorityViewButton: UIButton, ViewCustomizable {
     }
     
     func setup() {
-        layer.borderColor = UIColor.black.cgColor
-        layer.borderWidth = 1
         titleLabel?.font = UIFont.systemFont(ofSize: 12.0, weight: .semibold)
     }
 }

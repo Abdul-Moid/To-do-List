@@ -21,23 +21,23 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-tH-Pra" customClass="PriorityViewButton" customModule="To_do_List" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="125" height="56"/>
-                            <color key="backgroundColor" red="1" green="0.39675581920000003" blue="0.13980165980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.83404296874999995" green="0.81601267512698539" blue="0.8280169853442485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Low">
-                                <color key="titleColor" red="0.21714091234977043" green="0.45095703124999997" blue="0.046533376265528011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37u-Zy-I0R" customClass="PriorityViewButton" customModule="To_do_List" customModuleProvider="target">
                             <rect key="frame" x="125" y="0.0" width="125" height="56"/>
-                            <color key="backgroundColor" red="0.3545574728" green="1" blue="0.72283015380000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.73851562500000001" green="0.72255043607946923" blue="0.73317982928217518" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Medium">
-                                <color key="titleColor" red="0.45095703124999997" green="0.19370218284688281" blue="0.091735033092518153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-O1-qPs" customClass="PriorityViewButton" customModule="To_do_List" customModuleProvider="target">
                             <rect key="frame" x="250" y="0.0" width="125" height="56"/>
-                            <color key="backgroundColor" red="0.15056055662995804" green="0.93913712446373621" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.66839843750000005" green="0.65394903796444515" blue="0.66356924039179632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="High">
-                                <color key="titleColor" red="1" green="0.39675581915909164" blue="0.13980165980972059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                     </subviews>

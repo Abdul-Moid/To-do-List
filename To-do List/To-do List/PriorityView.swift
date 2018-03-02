@@ -21,5 +21,6 @@ class PriorityView: CustomReplaceableView, ViewCustomizable {
     
     func setup() {
         layer.cornerRadius = 5
+        clipsToBounds = true
     }
 }
