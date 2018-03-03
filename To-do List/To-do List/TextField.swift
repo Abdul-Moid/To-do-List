@@ -1,14 +1,14 @@
 //
-//  TextView.swift
+//  TextField.swift
 //  To-do List
 //
-//  Created by Abdulmoid Mohammed on 2/26/18.
+//  Created by Abdulmoid Mohammed on 3/2/18.
 //  Copyright © 2018 Abdul-Moid. All rights reserved.
 //
 
 import UIKit
 
-class TextView: UITextView {
+class TextField: UITextField {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -19,5 +19,7 @@ class TextView: UITextView {
         layer.borderWidth  = 1
         layer.cornerRadius = 5
         layer.borderColor  = UIColor.clear.cgColor
+
     }
+
 }

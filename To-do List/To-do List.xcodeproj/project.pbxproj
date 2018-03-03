@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D2B60EE2047894C00E80275 /* UIVIew+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B60ED2047894C00E80275 /* UIVIew+Utils.swift */; };
+		8D2B60FE204A69B400E80275 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B60FD204A69B400E80275 /* TextField.swift */; };
 		8D4AE9382043B30800D6A2AD /* TaskDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AE9372043B30800D6A2AD /* TaskDetailsViewController.swift */; };
 		8D4AE93A2045112A00D6A2AD /* PriorityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AE9392045112A00D6A2AD /* PriorityView.swift */; };
 		8D4AE93C2045114300D6A2AD /* PriorityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AE93B2045114300D6A2AD /* PriorityView.xib */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		8D2B60ED2047894C00E80275 /* UIVIew+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Utils.swift"; sourceTree = "<group>"; };
+		8D2B60FD204A69B400E80275 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		8D4AE9372043B30800D6A2AD /* TaskDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsViewController.swift; sourceTree = "<group>"; };
 		8D4AE9392045112A00D6A2AD /* PriorityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityView.swift; sourceTree = "<group>"; };
 		8D4AE93B2045114300D6A2AD /* PriorityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriorityView.xib; sourceTree = "<group>"; };
@@ -124,10 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				8D4AE93D204511C200D6A2AD /* PriorityViews */,
+				8D2B60FF204A69CE00E80275 /* CustomViews */,
 				8DDA1FB120300D68009EE46A /* TaskCell.swift */,
 				8DDA1FB020300D68009EE46A /* TaskCell.xib */,
-				8D4AE9402045163200D6A2AD /* TextView.swift */,
-				8D4AE942204661E000D6A2AD /* CustomReplaceableView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -150,6 +151,16 @@
 				8D4AE9372043B30800D6A2AD /* TaskDetailsViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8D2B60FF204A69CE00E80275 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AE942204661E000D6A2AD /* CustomReplaceableView.swift */,
+				8D2B60FD204A69B400E80275 /* TextField.swift */,
+				8D4AE9402045163200D6A2AD /* TextView.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		8D4AE93D204511C200D6A2AD /* PriorityViews */ = {
@@ -389,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DDFECB82037F6490048F6F7 /* UIAlertController+AlertDescription.swift in Sources */,
+				8D2B60FE204A69B400E80275 /* TextField.swift in Sources */,
 				8DDA1FB72030119F009EE46A /* TodoListViewController.swift in Sources */,
 				8D4AE9382043B30800D6A2AD /* TaskDetailsViewController.swift in Sources */,
 				8DDFECB52037F3EF0048F6F7 /* UIViewController+Error.swift in Sources */,

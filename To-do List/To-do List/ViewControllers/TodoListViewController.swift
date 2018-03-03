@@ -122,6 +122,9 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
         // Create an instance of TaskDetailsViewController
         let detailsVC = TaskDetailsViewController.instantiate(from: .TaskDetail)
         
+        // Pipe the selected task object
+        detailsVC.task = tasks[indexPath.row]
+        
         // Push to TaskDetailsViewController
         navigationController?.pushViewController(detailsVC, animated: true)
     }
