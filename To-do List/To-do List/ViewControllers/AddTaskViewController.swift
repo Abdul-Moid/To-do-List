@@ -12,7 +12,7 @@ protocol AddTaskDelegate {
     func didAddNewTask()
 }
 
-class AddTaskViewController: UIViewController {
+class AddTaskViewController: ViewController {
 
     // MARK: IBOutlets
     @IBOutlet private weak var taskTextField: UITextField!
@@ -25,11 +25,10 @@ class AddTaskViewController: UIViewController {
         return taskTextField.text
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func initialSetup() {
+        // Allow text field editing on view load
         self.taskTextField.becomeFirstResponder()
     }
-
 }
 
 // MARK:- IBActions

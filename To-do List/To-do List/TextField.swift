@@ -16,10 +16,10 @@ class TextField: UITextField {
     }
     
     private func setup() {
-        layer.borderWidth  = 1
-        layer.cornerRadius = 5
+        // Remove the border
+        borderStyle = .none
+        layer.borderWidth  = 0
         layer.borderColor  = UIColor.clear.cgColor
-
     }
 
 }

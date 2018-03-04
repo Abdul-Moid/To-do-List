@@ -8,8 +8,13 @@
 
 import UIKit
 
-class TaskDetailsViewController: UIViewController {
-    @IBOutlet weak var taskNameTextField: TextField!
+class TaskDetailsViewController: ViewController {
+    /// Task Name text field
+    @IBOutlet private weak var taskNameTextField: TextField!
+    
+    /// Title for view controller
+    private let titleString = "Task Details"
+    /// Task object associated with the view
     var task: Task?
     
     override func viewDidLoad() {
@@ -17,6 +22,12 @@ class TaskDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         updateView()
+    }
+    
+    // Any addional setup goes here
+    override func initialSetup() {
+        // Set title for the view
+        title = titleString
     }
     
     private func updateView() {
