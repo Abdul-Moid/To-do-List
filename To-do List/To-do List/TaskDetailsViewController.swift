@@ -30,6 +30,7 @@ class TaskDetailsViewController: ViewController {
         title = titleString
     }
     
+    // Update the data with views
     private func updateView() {
         guard let task = task else { return }
         

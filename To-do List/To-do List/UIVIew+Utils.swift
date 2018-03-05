@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+/// Programmatic customization of view controller
 protocol ViewCustomizable {
+    // Setup view
     func setup()
 }

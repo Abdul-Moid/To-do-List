@@ -18,5 +18,4 @@ extension Task {
 
     @NSManaged public var creationTime: NSDate?
     @NSManaged public var title: String?
-
 }

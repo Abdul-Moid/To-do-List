@@ -33,6 +33,7 @@ enum Priority: CustomStringInitializable,CustomStringConvertible {
         }
     }
     
+    // Initialize with string
     init(string: String) throws {
         switch string {
         case Priority.low.description:
