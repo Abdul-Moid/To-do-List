@@ -8,14 +8,14 @@
 
 import UIKit
 
-class TextField: UITextField {
+class TextField: UITextField, Editable, ViewCustomizable {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
-    private func setup() {
+    func setup() {
         // Remove the border
         borderStyle = .none
         layer.borderWidth  = 0

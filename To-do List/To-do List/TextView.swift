@@ -8,14 +8,14 @@
 
 import UIKit
 
-class TextView: UITextView {
+class TextView: UITextView, ViewCustomizable, Editable {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
-    private func setup() {
+    func setup() {
         layer.borderWidth  = 1
         layer.cornerRadius = 5
         layer.borderColor  = UIColor.clear.cgColor
