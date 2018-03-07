@@ -91,8 +91,7 @@ extension TodoListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskCell.id, for: indexPath) as! TaskCell
-        cell.titleLabel.text = tasks[indexPath.row].title
-        cell.creationDateLabel.text = "Created:\(tasks[indexPath.row].creationTime!.string(with: "dd/MM/yy"))"
+        cell.update(with: tasks[indexPath.row])
         return cell
     }
     

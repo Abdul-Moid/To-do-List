@@ -156,15 +156,20 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		8D2B60FF204A69CE00E80275 /* CustomViews */ = {
+		8D2B6114204FA95D00E80275 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				8D4AE942204661E000D6A2AD /* CustomReplaceableView.swift */,
 				8D2B60FD204A69B400E80275 /* TextField.swift */,
-				8D4AE9402045163200D6A2AD /* TextView.swift */,
-				8D2B610A204E5B9900E80275 /* Editable.swift */,
 			);
-			name = CustomViews;
+			name = TextField;
+			sourceTree = "<group>";
+		};
+		8D2B6115204FA96E00E80275 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AE9402045163200D6A2AD /* TextView.swift */,
+			);
+			name = TextView;
 			sourceTree = "<group>";
 		};
 		8D4AE93D204511C200D6A2AD /* PriorityViews */ = {
@@ -255,7 +260,10 @@
 		8DDFECB62037F61B0048F6F7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8D2B60FF204A69CE00E80275 /* CustomViews */,
+				8D2B6114204FA95D00E80275 /* TextField */,
+				8D2B6115204FA96E00E80275 /* TextView */,
+				8D4AE942204661E000D6A2AD /* CustomReplaceableView.swift */,
+				8D2B610A204E5B9900E80275 /* Editable.swift */,
 				8DDFECB42037F3EF0048F6F7 /* UIViewController+Error.swift */,
 				8DDFECB72037F6490048F6F7 /* UIAlertController+AlertDescription.swift */,
 				8DDFECBB203BE4BD0048F6F7 /* ViewIdentifiable.swift */,
