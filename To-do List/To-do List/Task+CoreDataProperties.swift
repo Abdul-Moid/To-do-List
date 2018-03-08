@@ -19,3 +19,11 @@ extension Task {
     @NSManaged public var creationTime: NSDate?
     @NSManaged public var title: String?
 }
+
+extension Array where Element: Task {
+    func arrangeTasks() -> [Task] {
+        return sorted(by: { (left, right) -> Bool in
+            return left.creationTime! > right.creationTime!
+        })
+    }
+}

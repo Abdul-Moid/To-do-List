@@ -16,4 +16,12 @@ extension NSDate {
         // Return the formatted string
         return formatter.string(from: Date())
     }
+    
+    public static func > (lhs: NSDate, rhs: NSDate) -> Bool {
+        return lhs.timeIntervalSinceReferenceDate > rhs.timeIntervalSinceReferenceDate
+    }
+    
+    public static func < (lhs: NSDate, rhs: NSDate) -> Bool {
+        return lhs.timeIntervalSinceReferenceDate < rhs.timeIntervalSinceReferenceDate
+    }
 }
