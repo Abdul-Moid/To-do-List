@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Darwin
 
 protocol AddTaskDelegate {
     func didAddNewTask()
@@ -66,6 +67,7 @@ extension AddTaskViewController {
         let task = Task(context: PersistenceManager.context)
         task.title = input
         task.creationTime = Date() as NSDate
+        task.taskId = String(arc4random())
         PersistenceManager.saveContext()
     }
 }

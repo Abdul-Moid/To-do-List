@@ -18,6 +18,7 @@ extension Task {
 
     @NSManaged public var creationTime: NSDate?
     @NSManaged public var title: String?
+    @NSManaged public var taskId: String?
 }
 
 extension Array where Element: Task {
