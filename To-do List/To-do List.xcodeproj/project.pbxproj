@@ -40,6 +40,7 @@
 		8DDFECB82037F6490048F6F7 /* UIAlertController+AlertDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDFECB72037F6490048F6F7 /* UIAlertController+AlertDescription.swift */; };
 		8DDFECBA203A99DD0048F6F7 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDFECB9203A99DD0048F6F7 /* Priority.swift */; };
 		8DDFECBC203BE4BD0048F6F7 /* ViewIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDFECBB203BE4BD0048F6F7 /* ViewIdentifiable.swift */; };
+		8DE325E82056404200FCDE49 /* TaskPriority.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE325E72056404200FCDE49 /* TaskPriority.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		8DDFECB72037F6490048F6F7 /* UIAlertController+AlertDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+AlertDescription.swift"; sourceTree = "<group>"; };
 		8DDFECB9203A99DD0048F6F7 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		8DDFECBB203BE4BD0048F6F7 /* ViewIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentifiable.swift; sourceTree = "<group>"; };
+		8DE325E72056404200FCDE49 /* TaskPriority.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskPriority.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				8D8D12382030021F0011CB65 /* Main.storyboard */,
 				8D64FDDB2042712700227D66 /* AddTask.storyboard */,
 				8D64FDDD204343BB00227D66 /* TaskDetail.storyboard */,
+				8DE325E72056404200FCDE49 /* TaskPriority.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				8DDA1FB220300D68009EE46A /* TaskCell.xib in Resources */,
 				8D8D123F2030021F0011CB65 /* LaunchScreen.storyboard in Resources */,
 				8D8D123C2030021F0011CB65 /* Assets.xcassets in Resources */,
+				8DE325E82056404200FCDE49 /* TaskPriority.storyboard in Resources */,
 				8D64FDDC2042712700227D66 /* AddTask.storyboard in Resources */,
 				8D64FDDE204343BB00227D66 /* TaskDetail.storyboard in Resources */,
 				8D8D123A2030021F0011CB65 /* Main.storyboard in Resources */,
